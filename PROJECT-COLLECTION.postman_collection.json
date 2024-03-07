@@ -1,0 +1,679 @@
+{
+	"info": {
+		"_postman_id": "3a1de6cb-9af4-4f38-a015-c0ca070118bb",
+		"name": "PROJECT-COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16323461"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"komeng\",\r\n    \"nip\": \"123456766\",\r\n    \"birthplace\": \"jakarta\",\r\n    \"birthdate\": \"1987-11-24T00:00:00Z\",\r\n    \"age\": 43,\r\n    \"address\": \"jakarta timur\",\r\n    \"religion\": \"islam\",\r\n    \"gender\": \"laki-laki\",\r\n    \"phone_number\": \"082134567898\",\r\n    \"email\": \"komeng@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9078/agit/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9078",
+							"path": [
+								"agit",
+								"employee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"komeng\",\r\n    \"nip\": \"123456766\",\r\n    \"birthplace\": \"jakarta\",\r\n    \"birthdate\": \"1987-11-24T00:00:00Z\",\r\n    \"age\": 43,\r\n    \"address\": \"jakarta timur\",\r\n    \"religion\": \"islam\",\r\n    \"gender\": \"laki-laki\",\r\n    \"phone_number\": \"082134567898\",\r\n    \"email\": \"komeng@mail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9078/agit/employee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9078",
+									"path": [
+										"agit",
+										"employee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Mar 2024 17:24:53 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "111"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"request_id\": \"37211ed5-7778-4565-b40c-43f8671f9188\",\n    \"status\": true,\n    \"message\": \"Success Store Data!\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get ID Employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9078/agit/employee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9078",
+							"path": [
+								"agit",
+								"employee",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get ID Employee",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9078/agit/employee/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9078",
+									"path": [
+										"agit",
+										"employee",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Mar 2024 17:26:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "424"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"request_id\": \"f409d72f-0a9d-46bb-b106-e44bdeebdc34\",\n    \"status\": true,\n    \"message\": \"Success Get Detail!\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"komeng\",\n        \"nip\": \"123456766\",\n        \"email\": \"komeng@mail.com\",\n        \"phone_number\": \"082134567898\",\n        \"birthplace\": \"jakarta\",\n        \"birthdate\": \"1987-11-24T00:00:00Z\",\n        \"age\": 43,\n        \"address\": \"jakarta timur\",\n        \"religion\": \"islam\",\n        \"gender\": \"laki-laki\",\n        \"created_at\": \"2024-03-08T00:24:53.323714Z\",\n        \"updated_at\": \"2024-03-08T00:24:53.323714Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9078/agit/employee?page=1&limit=5&order=name desc&filter=name like komeng",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9078",
+							"path": [
+								"agit",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "order",
+									"value": "name desc"
+								},
+								{
+									"key": "filter",
+									"value": "name like komeng"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch Employee",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9078/agit/employee?page=1&limit=5&order=name desc&filter=name like komeng",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9078",
+									"path": [
+										"agit",
+										"employee"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "order",
+											"value": "name desc"
+										},
+										{
+											"key": "filter",
+											"value": "name like komeng"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Mar 2024 17:28:55 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"request_id\": \"326eaaf0-72bc-4dec-8df9-8ed4d33bf540\",\n    \"status\": true,\n    \"message\": \"Success Fetch Data!\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"komeng\",\n            \"nip\": \"123456766\",\n            \"email\": \"komeng@mail.com\",\n            \"phone_number\": \"082134567898\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"komeng\",\r\n    \"nip\": \"123456766\",\r\n    \"birthplace\": \"jakarta timur\",\r\n    \"birthdate\": \"1987-11-24T00:00:00Z\",\r\n    \"age\": 43,\r\n    \"address\": \"jakarta timur\",\r\n    \"religion\": \"islam\",\r\n    \"gender\": \"laki-laki\",\r\n    \"phone_number\": \"082134567898\",\r\n    \"email\": \"komenguhuy@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9078/agit/employee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9078",
+							"path": [
+								"agit",
+								"employee",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Employee",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"komeng\",\r\n    \"nip\": \"123456766\",\r\n    \"birthplace\": \"jakarta timur\",\r\n    \"birthdate\": \"1987-11-24T00:00:00Z\",\r\n    \"age\": 43,\r\n    \"address\": \"jakarta timur\",\r\n    \"religion\": \"islam\",\r\n    \"gender\": \"laki-laki\",\r\n    \"phone_number\": \"082134567898\",\r\n    \"email\": \"komenguhuy@mail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9078/agit/employee/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9078",
+									"path": [
+										"agit",
+										"employee",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Mar 2024 17:29:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"request_id\": \"6360a31e-b100-4106-9767-eb71466f2b37\",\n    \"status\": true,\n    \"message\": \"Success Update!\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9078/agit/employee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9078",
+							"path": [
+								"agit",
+								"employee",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Employee",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9078/agit/employee/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9078",
+									"path": [
+										"agit",
+										"employee",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Mar 2024 17:29:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"request_id\": \"91c2bf8b-8bfc-44ca-b31a-a92301efca04\",\n    \"status\": true,\n    \"message\": \"Success Delete!\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"samuel15\",\r\n    \"password\": \"Samuel123@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9078/agit/oauth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9078",
+					"path": [
+						"agit",
+						"oauth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"samuel15\",\r\n    \"password\": \"Samuel123@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9078/agit/oauth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9078",
+							"path": [
+								"agit",
+								"oauth",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Mar 2024 17:06:58 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request_id\": \"d26648dc-ff21-41a3-8813-df5dabb5ebc8\",\n    \"status\": true,\n    \"message\": \"Success Register!\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"samuel15\",\r\n    \"password\": \"Samuel123@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9078/agit/oauth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9078",
+					"path": [
+						"agit",
+						"oauth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"samuel15\",\r\n    \"password\": \"Samuel123@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9078/agit/oauth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9078",
+							"path": [
+								"agit",
+								"oauth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDk4MzQ0ODMsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoic2FtdWVsMTUifQ.vbtKVD7cypsgPVtOSZ3bfzv78zZV3OJYd-7UqcpylB0; Path=/; Max-Age=1709834483; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Mar 2024 17:31:23 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "112"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request_id\": \"44a3d445-be0b-40a0-a5dd-6bbc00aca33c\",\n    \"status\": true,\n    \"message\": \"Token has generated!\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9078/agit/oauth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9078",
+					"path": [
+						"agit",
+						"oauth",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9078/agit/oauth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9078",
+							"path": [
+								"agit",
+								"oauth",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=; Path=/; Max-Age=1709829065; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Mar 2024 17:31:05 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "108"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request_id\": \"405eb1b0-fb20-4055-9a92-fbbf042b320d\",\n    \"status\": true,\n    \"message\": \"Logout Success!!\",\n    \"data\": null\n}"
+				}
+			]
+		}
+	]
+}
