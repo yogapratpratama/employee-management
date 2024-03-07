@@ -24,13 +24,13 @@ func Controller() {
 	userHandler := handler.NewUsersHandler(user_usecase.NewUsersUsecase(user_repository.NewPgsqlUserRepository(serverconfig.ServerAttribute.DBConnection), 10*time.Second))
 	employeeHandler := handler.NewEmployeeHandler(employee_usecase.NewEmployeeUsecase(employee_repository.NewPgsqlEmployeeRepository(serverconfig.ServerAttribute.DBConnection), 10*time.Second))
 
-	// WhiteList API no authorization here (public)
+	// WhiteList API no authentication here (public)
 	whiteListAPI := r.Group(prefixPath + "/oauth")
 	whiteListAPI.POST("/login", userHandler.LoginHandler)
 	whiteListAPI.POST("/register", userHandler.RegisterHandler)
 	whiteListAPI.POST("/logout", userHandler.LogoutHandler)
 
-	// Private API Employee authorization needed (private)
+	// Private API Employee authentication needed (private)
 	privateAPIEmployee := r.Group(prefixPath + "/employee")
 	privateAPIEmployee.Use(middleware.AuthMiddleware)
 	privateAPIEmployee.POST("", employeeHandler.StoreEmployeeHandler)

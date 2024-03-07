@@ -1,12 +1,12 @@
 
-# Project EMPLOYEE MANAGEMENT API (With JWT Authorization)
+# Project EMPLOYEE MANAGEMENT API (With JWT Authentication)
 
-The Project Test API is contains some API for employee management. This Project use stacks such HTTP Rest API and JWT Authorization also for access main API.
+The Project Test API is contains some API for employee management. This Project use stacks such HTTP Rest API and JWT Authentication also for access main API.
 
 
 ## Tech Stack
 
-**Server:** Golang, JWT Authorization, gin gonic
+**Server:** Golang, JWT Authentication, gin gonic
 
 
 ## Run Locally
